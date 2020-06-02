@@ -156,6 +156,16 @@ if (in_array('international', $opts)){
 		$b = $b + 1;
 	}
  }
+ if (in_array('final', $opts)){
+    if($b==0){
+		$where .= ") AND (final = 1";
+		$b = $b + 1;
+	}
+	else{
+		$where .= " OR final = 1";
+		$b = $b + 1;
+	}
+ }
  if (in_array('minority', $opts)){
     if($b==0){
 		$where .= ") AND (minority = 1";
@@ -178,7 +188,7 @@ if (in_array('international', $opts)){
  }
  if (in_array('financial', $opts)){
     if($c==0){
-		$where .= ") OR (financial = 1";
+		$where .= ") AND (financial = 1";
 		$c = $c + 1;
 	}
 	else{
@@ -188,7 +198,7 @@ if (in_array('international', $opts)){
  }
  if (in_array('sports', $opts)){
     if($c==0){
-		$where .= ") OR (sports = 1";
+		$where .= ") AND (sports = 1";
 		$c = $c + 1;
 	}
 	else{
@@ -198,7 +208,7 @@ if (in_array('international', $opts)){
  }
  if (in_array('highed', $opts)){
     if($c==0){
-		$where .= ") OR (highed = 1";
+		$where .= ") AND (highed = 1";
 		$c = $c + 1;
 	}
 	else{
@@ -208,7 +218,7 @@ if (in_array('international', $opts)){
  }
  if (in_array('state', $opts)){
     if($c==0){
-		$where .= ") OR (state = 1";
+		$where .= ") AND (state = 1";
 		$c = $c + 1;
 	}
 	else{
@@ -218,7 +228,7 @@ if (in_array('international', $opts)){
  }
  if (in_array('research', $opts)){
     if($c==0){
-		$where .= ") OR (research = 1";
+		$where .= ") AND (research = 1";
 		$c = $c + 1;
 	}
 	else{
@@ -228,11 +238,21 @@ if (in_array('international', $opts)){
  }
  if (in_array('exchange', $opts)){
     if($c==0){
-		$where .= ") OR (exchange = 1";
+		$where .= ") AND (exchange = 1";
 		$c = $c + 1;
 	}
 	else{
 		$where .= " OR exchange = 1";
+		$c = $c + 1;
+	}
+ }
+ if (in_array('ent', $opts)){
+    if($c==0){
+		$where .= ") AND (ent = 1";
+		$c = $c + 1;
+	}
+	else{
+		$where .= " OR ent = 1";
 		$c = $c + 1;
 	}
  }
@@ -262,7 +282,8 @@ if (in_array('international', $opts)){
 	    echo "<td>" . $row['name'] . "</td>";
 	    echo "<td>" . $row['details'] . "</td>";
 	    echo "<td>" . $row['incentives'] . "</td>";
-	    echo "<td>" . $row['link'] . "</td>";
+	    echo "<td><a href='". $row['link'] ."'>"  . $row['link'] . "</a></td>";
+	    //echo "<td>" . $row['link'] . "</td>";
 	    echo "</tr>";
 
 	    $number = $number + 1;
@@ -282,3 +303,4 @@ if (in_array('international', $opts)){
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 </body>
 </html>
+
