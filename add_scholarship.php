@@ -65,6 +65,11 @@
 			</div>
 			<div class="form-check">
 			  <label class="form-check-label" style="color:grey;">
+			   	<p><input type="checkbox" name="filter[]" value="final" /> Only for final year students</p>
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label" style="color:grey;">
 			   	<p><input type="checkbox" name="filter[]" value="minority" /> For minorities</p>
 			  </label>
 			</div>
@@ -103,6 +108,11 @@
 			<div class="form-check">
 			  <label class="form-check-label" style="color:grey;">
 			   	<p><input type="checkbox" name="filter[]" value="exchange" /> Exchange Program</p>
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label" style="color:grey;">
+			   	<p><input type="checkbox" name="filter[]" value="ent" /> Entrepreneurship</p>
 			  </label>
 			</div>
 			

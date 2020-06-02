@@ -26,23 +26,25 @@
 	<form method="post">
 		<!--<p><input type="checkbox" name="filter[]" value="allent" />Show all</p>-->
 		<h4 style="Franklin Gothic Medium;padding-top: 0px;background-image: linear-gradient(-90deg, #00e6ac, #00004d);color:#f0f5f5; "> Select either or both:</h3>
-		<p><input type="checkbox" name="filter[]" value="international" <?php if(in_array('international',$_POST['filter'])) echo "checked='checked'"; ?>  /> International</p>
-		<p><input type="checkbox" name="filter[]" value="national" <?php if(in_array('national',$_POST['filter'])) echo "checked='checked'"; ?>  /> National</p>
+		<p><input type="checkbox" name="filter[]" value="international" <?php if(in_array('international',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?>  /> International</p>
+		<p><input type="checkbox" name="filter[]" value="national" <?php if(in_array('national',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?>  /> National</p>
 		<h4 style="Franklin Gothic Medium;padding-top: 0px;background-image: linear-gradient(-90deg, #00e6ac, #00004d);color:#f0f5f5; "> Select category:</h3>
-		<p><input type="checkbox" name="filter[]" value="merit" <?php if(in_array('merit',$_POST['filter'])) echo "checked='checked'"; ?> /> Merit-based for all</p>
-		<p><input type="checkbox" name="filter[]" value="girls" <?php if(in_array('girls',$_POST['filter'])) echo "checked='checked'"; ?> /> Only for Girls</p>
-		<p><input type="checkbox" name="filter[]" value="scst" <?php if(in_array('scst',$_POST['filter'])) echo "checked='checked'"; ?> /> Only for SC/ST students</p>
-		<p><input type="checkbox" name="filter[]" value="bs" <?php if(in_array('bs',$_POST['filter'])) echo "checked='checked'"; ?> /> Only for BS students</p>
-		<p><input type="checkbox" name="filter[]" value="first" <?php if(in_array('first',$_POST['filter'])) echo "checked='checked'"; ?> /> Only for first year students</p>
-		<p><input type="checkbox" name="filter[]" value="minority" <?php if(in_array('minority',$_POST['filter'])) echo "checked='checked'"; ?> /> For minorities</p>
-		<p><input type="checkbox" name="filter[]" value="special" <?php if(in_array('special',$_POST['filter'])) echo "checked='checked'"; ?> /> For Specially-abled students</p>
+		<p><input type="checkbox" name="filter[]" value="merit" <?php if(in_array('merit',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Merit-based for all</p>
+		<p><input type="checkbox" name="filter[]" value="girls" <?php if(in_array('girls',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Only for Girls</p>
+		<p><input type="checkbox" name="filter[]" value="scst" <?php if(in_array('scst',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Only for SC/ST students</p>
+		<p><input type="checkbox" name="filter[]" value="bs" <?php if(in_array('bs',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Only for BS students</p>
+		<p><input type="checkbox" name="filter[]" value="first" <?php if(in_array('first',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Only for first year students</p>
+		<p><input type="checkbox" name="filter[]" value="final" <?php if(in_array('final',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Only for final year students</p>
+		<p><input type="checkbox" name="filter[]" value="minority" <?php if(in_array('minority',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> For minorities</p>
+		<p><input type="checkbox" name="filter[]" value="special" <?php if(in_array('special',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> For Specially-abled students</p>
 		<h4 style="Franklin Gothic Medium;padding-top: 0px;background-image: linear-gradient(-90deg, #00e6ac, #00004d);color:#f0f5f5; "> Select additional filters:</h3>
-		<p><input type="checkbox" name="filter[]" value="financial" <?php if(in_array('financial',$_POST['filter'])) echo "checked='checked'"; ?> /> With Financial Constraints</p>
-		<p><input type="checkbox" name="filter[]" value="sports" <?php if(in_array('sports',$_POST['filter'])) echo "checked='checked'"; ?> /> Sports</p>
-		<p><input type="checkbox" name="filter[]" value="highed" <?php if(in_array('highed',$_POST['filter'])) echo "checked='checked'"; ?>  /> Higher Education</p>
-		<p><input type="checkbox" name="filter[]" value="state" <?php if(in_array('state',$_POST['filter'])) echo "checked='checked'"; ?> /> State Scholarships</p>
-		<p><input type="checkbox" name="filter[]" value="research" <?php if(in_array('research',$_POST['filter'])) echo "checked='checked'"; ?> /> Research and Internship abroad</p>
-		<p><input type="checkbox" name="filter[]" value="exchange" <?php if(in_array('exchange',$_POST['filter'])) echo "checked='checked'"; ?> /> Exchange Program</p>
+		<p><input type="checkbox" name="filter[]" value="financial" <?php if(in_array('financial',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> With Financial Constraints</p>
+		<p><input type="checkbox" name="filter[]" value="sports" <?php if(in_array('sports',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Sports</p>
+		<p><input type="checkbox" name="filter[]" value="highed" <?php if(in_array('highed',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?>  /> Higher Education</p>
+		<p><input type="checkbox" name="filter[]" value="state" <?php if(in_array('state',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> State Scholarships</p>
+		<p><input type="checkbox" name="filter[]" value="research" <?php if(in_array('research',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Research and Internship abroad</p>
+		<p><input type="checkbox" name="filter[]" value="exchange" <?php if(in_array('exchange',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Exchange Program</p>
+		<p><input type="checkbox" name="filter[]" value="ent" <?php if(in_array('ent',isset($_POST['filter'])? $_POST['filter'] : array('allent'))) echo "checked='checked'"; ?> /> Entrepreneurship</p>
 		<p><input type="submit" name="submit" value="Submit" /></p>
 	</form>
 </div>
